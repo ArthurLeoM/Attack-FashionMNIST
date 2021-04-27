@@ -1,6 +1,10 @@
-## Adversarial Attack on FashionMNIST
+# Adversarial Attack on FashionMNIST
 
-In this project, we tried to perfrom adversarial attack on ```FashionMNIST``` dataset (https://github.com/zalandoresearch/fashion-mnist), which consists of 60k/10k (Train/Test) 28*28-pixel pics separated into 10 classes. Our goal can be described as the following steps:
+In this project, we tried to perfrom adversarial attack on ```FashionMNIST``` dataset (https://github.com/zalandoresearch/fashion-mnist), which consists of 60k/10k (Train/Test) 28*28-pixel pics separated into 10 classes.
+
+## Introduction
+
+ Our goal can be described as the following steps:
 
 - Train a just-so-so model on ```FashionMNIST``` (with 90%+ accuracy performance on test set)
 - Attack this model: Add some noises to our samples in test set, in order to confuse our model to predict these samples from class i to class (i+1)%10.
@@ -15,7 +19,7 @@ We trained two different models:
 
 to conduct the experiments above. We will report our experiment results in this file.
 
-#### Files & Directories:
+## Files & Directories:
 
 - ```convModel.py```: Three-Layer Convolution model
 - ```ResNet18.py```: ResNet18 model
@@ -26,7 +30,7 @@ to conduct the experiments above. We will report our experiment results in this 
 - ```learning curve/```: the saved learning curves for different models.
 - ```attack_result/```: (randomly selected) attacked samples from different classes. Pics in this directory is named ```a_b.jpg```, which means this pic is originally in class ```a```, but is predicted to class ```b``` after noised added.
 
-#### Results:
+## Results:
 
 We provided **Test Acc. (Trained Before Attack)**, **Test Acc. (With Attacked Data)** in the chart below. And the corresponding attacked samples is saved in directory ```attack_result/```.
 
@@ -56,7 +60,7 @@ We can draw several interesting **conclusions** from the results:
 
 <img src="./margin_sample.png" alt="image-20210427161207918" style="zoom:33%;" />
 
-#### Wanna try to attack?
+## Wanna try to attack?
 
 Simply run the cmdlines below! You can try different experiment settings using different parameters.
 
